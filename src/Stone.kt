@@ -1,5 +1,5 @@
-enum class Stone(val label:String) {
-    WHITE("●"),BLACK("◯"),AIR("　");
+enum class Stone(private val label:String) {
+    WHITE("●"),BLACK("◯"),AIR("☐");
     val rearStone:Stone
         get() = when(this){
             WHITE -> BLACK
