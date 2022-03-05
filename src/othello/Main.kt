@@ -2,7 +2,6 @@ package othello
 
 import othello.player.Human
 import othello.player.Random
-
 fun main(){
     val board = Board(8)
     val player1 = Human(Stone.BLACK,"プレイヤー1")
@@ -10,3 +9,4 @@ fun main(){
     val game = Game(player1,player2,board)
     game.start()
 }
+
