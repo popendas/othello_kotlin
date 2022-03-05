@@ -111,7 +111,7 @@ class Board(val size: Int) {
 }
 
 private class Pointer(val defaultX: Int, val defaultY: Int, val xVector: Int, val yVector: Int) {
-    var i: Int = 0
+    private var i: Int = 0
 
     var x: Int = 0
         private set
