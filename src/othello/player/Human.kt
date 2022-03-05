@@ -3,6 +3,12 @@ package othello.player
 import othello.Board
 import othello.Stone
 
+/**
+ * 標準入力で設置場所の選択を行うクラス
+ *
+ * @param stone プレイヤーに持たせる石
+ * @param name 名前
+ */
 class Human(stone: Stone, name: String) : Player(stone, name) {
     /**
      * 標準入力で石の置く場所を指定します。

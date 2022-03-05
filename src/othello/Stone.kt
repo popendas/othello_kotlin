@@ -2,6 +2,9 @@ package othello
 
 enum class Stone(private val label:String) {
     WHITE("●"),BLACK("◯"),AIR("☐");
+    /**
+     * 自分の裏を返します
+     */
     val rearStone: Stone
         get() = when(this){
             WHITE -> BLACK

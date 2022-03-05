@@ -3,6 +3,12 @@ package othello.player
 import othello.Board
 import othello.Stone
 
+/**
+ * 石を置く場所を決める抽象クラス
+ *
+ * @param stone プレイヤーに持たせる石
+ * @param name 名前
+ */
 abstract class Player(val stone: Stone,val name:String) {
     /**
      * ボードの状態から石を置く場所を選択し返します。

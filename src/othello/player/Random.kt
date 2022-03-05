@@ -3,7 +3,12 @@ package othello.player
 import othello.Board
 import othello.Stone
 
-
+/**
+ * 石を置く場所をランダムで決めるクラス
+ *
+ * @param stone プレイヤーに持たせる石
+ * @param name 名前
+ */
 class Random(stone: Stone, name: String) : Player(stone, name) {
     /**
      * ランダムにボードの場所を1つ選択し戻します。
