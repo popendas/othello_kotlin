@@ -58,6 +58,34 @@ class Board(val size: Int) {
         return false
     }
 
+    /**
+     * それぞれの石の個数を保持したMapを戻します。
+     *
+     * @return それぞれの石の個数を保持したMap
+     */
+    fun getStoneMap():Map<Stone,Int>{
+        val mutableMap = mutableMapOf<Stone,Int>(Stone.BLACK to 0, Stone.WHITE to 0, Stone.AIR to 0)
+        for(line in this.board)
+            for (stone in line)
+                mutableMap[stone] = 1 + mutableMap[stone]!!
+        return mutableMap
+    }
+
+    /**
+     * 指定した石を設置できる場所をすべて返します
+     *
+     * @param stone 設置する石の種類
+     * @return 座標を保持したリスト
+     */
+    fun getPutList(stone: Stone):List<Pair<Int,Int>>{
+        val mutableList = mutableListOf<Pair<Int,Int>>()
+        for (x in board.indices)
+            for (y in board.indices)
+                if (put(x, y, stone, true))
+                    mutableList.add(x to y)
+        return mutableList
+    }
+
     private fun putVector(pointer: Pointer, stone: Stone, checkMode: Boolean): Boolean {
         if (pointer.xVector == 0 && pointer.yVector == 0) {
             //ベクトルが二つとも0なら処理をしない

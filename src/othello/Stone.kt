@@ -1,6 +1,8 @@
+package othello
+
 enum class Stone(private val label:String) {
     WHITE("●"),BLACK("◯"),AIR("☐");
-    val rearStone:Stone
+    val rearStone: Stone
         get() = when(this){
             WHITE -> BLACK
             BLACK -> WHITE

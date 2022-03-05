@@ -1,5 +1,6 @@
 package othello.player
 
+import othello.Board
 import othello.Stone
 
 abstract class Player(val stone: Stone,val name:String) {
@@ -9,6 +10,6 @@ abstract class Player(val stone: Stone,val name:String) {
      * @param board Stone型の二次配列
      * @return 選択したx座標とy座標のPair
      */
-    abstract fun select(board:Array<Array<Stone>>):Pair<Int,Int>
+    abstract fun select(board:Board):Pair<Int,Int>
 
 }
