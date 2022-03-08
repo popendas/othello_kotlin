@@ -1,0 +1,2 @@
+# othello_kotlin
+kotlinの勉強のために作ったオセロです
